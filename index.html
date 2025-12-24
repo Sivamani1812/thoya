@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hair Loss Treatment | Thoya Clinic</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <img src="./img/thoya-logo.png" alt="Thoya Logo" />
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container"></div>
+    </section>
+
+    <!-- Book Appointment Form (Sticky) -->
+    <div class="appointment-sticky" id="appointmentSticky">
+      <div class="container">
+        <button class="book-btn-sticky" onclick="openAppointmentModal()">
+          Book Appointment
+        </button>
+      </div>
+    </div>
+
+    <!-- Appointment Modal -->
+    <div class="modal" id="appointmentModal">
+      <div class="modal-content">
+        <span class="close" onclick="closeAppointmentModal()">&times;</span>
+        <h2>Book Appointment</h2>
+        <form class="appointment-form" id="appointmentForm">
+          <div class="form-group">
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter Phone Number"
+              required
+            />
+            <button type="button" class="btn-send-otp" onclick="sendOTP()">
+              Send OTP
+            </button>
+          </div>
+          <div class="form-group otp-group" id="otpGroup" style="display: none">
+            <input type="text" id="otp" placeholder="Enter OTP" maxlength="6" />
+            <button type="button" class="btn-resend-otp" onclick="sendOTP()">
+              Resend OTP
+            </button>
+            <button type="button" class="btn-verify" onclick="verifyOTP()">
+              Verify
+            </button>
+          </div>
+          <div class="form-group">
+            <select id="city" required>
+              <option value="">Select City</option>
+              <option value="ahmedabad">Ahmedabad</option>
+              <option value="bangalore">Bangalore</option>
+              <option value="chennai">Chennai</option>
+              <option value="delhi">Delhi</option>
+              <option value="hyderabad">Hyderabad</option>
+              <option value="kochi">Kochi</option>
+              <option value="kolkata">Kolkata</option>
+              <option value="pune">Pune</option>
+              <option value="vizag">Vizag</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit">
+            <span class="callback-icon">📞</span>
+            Submit
+          </button>
+        </form>
+        <p class="callback-guarantee">
+          <span class="callback-icon">📞</span>
+          5 Minutes Call Back. Guaranteed!
+        </p>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <div class="container">
+        <ul class="nav-list">
+          <li><a href="#results">Results</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#symptoms">Symptoms</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Why Choose Thoya Section -->
+    <section class="why-choose">
+      <div class="container">
+        <h2>Why Choose Thoya Clinic for Hair Loss Solutions?</h2>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <img src="./img/Dermatologists.png" alt="Dermatologists" />
+            <h3>Expert Dermatologists & Trichologists</h3>
+            <p>
+              Our certified hair specialists diagnose why your hair is falling —
+              stress, sleep, hormones, nutrition, screen time or weak roots —
+              then treat it scientifically.
+            </p>
+          </div>
+          <div class="feature-item">
+            <img src="./img/hair.png" alt="Hair Regrowth" />
+            <h3>Advanced Hair Regrowth Treatments</h3>
+            <p>
+              We offer clinically proven options that go beyond shampoos & oils:
+              PRP, QR678 Neo, Exzo Zone GFC, Hair Advanced GFC & Hair
+              Transplantation.
+            </p>
+          </div>
+          <div class="feature-item">
+            <img src="./img/time.png" alt=" Non-Surgical" />
+            <h3>Safe, Non-Surgical & Minimal Downtime</h3>
+            <p>
+              Treatments use your own blood growth factors or advanced peptide
+              technology to stimulate dormant follicles and support real
+              regrowth.
+            </p>
+          </div>
+          <div class="feature-item">
+            <img src="./img/plan.png" alt="Personalized Plans for You" />
+            <h3>Personalized Plans for You</h3>
+            <p>
+              Not everyone has the same hair loss cause — so your plan is
+              customized based on scalp health, lifestyle & severity of
+              thinning.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before After Results Section -->
+    <section class="results" id="results">
+      <div class="container">
+        <h2>See Real Transformations</h2>
+
+        <ul class="section-subtitle">
+          <li>Before & After photos</li>
+          <li>Verified results from patients</li>
+          <li>Visible improvement in thickness & fall control</li>
+        </ul>
+
+        <div class="results-grid">
+          <div class="result-item">
+            <div class="before-after">
+              <div class="before">
+                <img src="./img/after11.jpeg" alt="Before" />
+                <span>Before</span>
+              </div>
+              <div class="after">
+                <img src="./img/before11.jpeg" alt="After" />
+                <span>After</span>
+              </div>
+            </div>
+            <div class="result-info">
+              <p><strong>Name:</strong> HARI</p>
+              <p><strong>Client ID:</strong> JH04C6998</p>
+            </div>
+          </div>
+          <div class="result-item">
+            <div class="before-after">
+              <div class="before">
+                <img src="./img/after12.jpeg" alt="Before" />
+                <span>Before</span>
+              </div>
+              <div class="after">
+                <img src="./img/before12.jpeg" alt="After" />
+                <span>After</span>
+              </div>
+            </div>
+            <div class="result-info">
+              <p><strong>Name:</strong> RAVEENA</p>
+              <p><strong>Client ID:</strong> SN06C6679</p>
+            </div>
+          </div>
+          <div class="result-item">
+            <div class="before-after">
+              <div class="before">
+                <img src="./img/before13.jpeg" alt="Before" />
+                <span>Before</span>
+              </div>
+              <div class="after">
+                <img src="./img/after13.jpeg" alt="After" />
+                <span>After</span>
+              </div>
+            </div>
+            <div class="result-info">
+              <p><strong>Name:</strong> RAVIRAM</p>
+              <p><strong>Client ID:</strong> SN06C286</p>
+            </div>
+          </div>
+        </div>
+        <div class="cta-section">
+          <p>
+            Submit your details and our team will reach you within <span>minutes</span>  to
+            schedule a free consultation.
+          </p>
+          <a href="tel:8870686660" class="btn-talk-expert">
+            Fast Call-Back & Easy Booking
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+      <div class="">
+        <h2>We Treat All Hair Loss Types</h2>
+        <p class="section-subtitle">
+          Check out real images of clients who have undergone treatment at Thoya
+        </p>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <img src="./img/c1.jpg" alt="Excessive daily hair fall" />
+            <h3>Excessive daily hair fall</h3>
+          </div>
+          <div class="benefit-item">
+            <img src="./img/c2.jpg" alt="Thinning & volume loss" />
+            <h3>Thinning & volume loss</h3>
+          </div>
+          <div class="benefit-item">
+            <img src="./img/c3.jpg" alt="Breakage & weak roots" />
+            <h3>Breakage & weak roots</h3>
+          </div>
+          <div class="benefit-item">
+            <img
+              src="./img/c4.jpg"
+              alt="Pattern baldness & receding hairline"
+            />
+            <h3>Pattern baldness & receding hairline</h3>
+          </div>
+          <div class="benefit-item">
+            <img
+              src="./img/c5.jpg"
+              alt="Scalp sensitivities & chronic hair shedding"
+            />
+            <h3>Scalp sensitivities & chronic hair shedding</h3>
+          </div>
+          <div class="benefit-item">
+            <img src="./img/c6.jpg" alt="Reduced growth & poor density" />
+            <h3>Reduced growth & poor density</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Symptoms and Types Section -->
+    <section class="symptoms" id="symptoms">
+      <div class="container">
+        <h2>Advanced Solutions We Offer</h2>
+        <!-- <p class="section-subtitle">
+          Check out real images of clients who have undergone treatment at Thoya
+        </p> -->
+        <div class="symptoms-grid">
+          <div class="symptom-item">
+            <img src="./img/ha1.jpg" alt="Hair Loss" />
+            <h3>Hair Root Revitalization | QR678 Neo</h3>
+            <p>
+              Boosts growth factors to awaken dormant follicles and increase
+              density.
+            </p>
+            <button class="btn-select-package">Select Package</button>
+          </div>
+          <div class="symptom-item">
+            <img src="./img/prp-hair.jpg" alt="Reduced Hair Growth" />
+            <h3>PRP Hair Therapy</h3>
+            <p>
+              Your own platelet-rich plasma injected into the scalp to
+              strengthen roots & regrow hair.
+            </p>
+            <button class="btn-select-package">Select Package</button>
+          </div>
+          <div class="symptom-item">
+            <img src="./img/gfc.jpg" alt="GFC " />
+            <h3>GFC</h3>
+            <p>
+              Growth factor concentrate therapies to enhance thickness & reduce
+              fall.
+            </p>
+            <button class="btn-select-package">Select Package</button>
+          </div>
+          <div class="symptom-item">
+            <img src="./img/hairtran.jpeg" alt="Hair Transplantation " />
+            <h3>Hair Transplantation</h3>
+            <p>
+              For advanced hair loss and balding areas requiring permanent
+              restoration.
+            </p>
+            <button class="btn-select-package">Select Package</button>
+          </div>
+          <div class="symptom-item">
+            <img src="./img/skin1.jpg" alt="Skin Transplantation " />
+            <h3>PRP Skin Therapy</h3>
+            <p>
+              A natural skin rejuvenation treatment that improves texture, tone, and collagen using your body’s own growth factors.
+            </p>
+            <button class="btn-select-package">Select Package</button>
+          </div>
+          <div class="symptom-item">
+            <img src="./img/exo gfc.webp" alt="Exco Gfc " />
+            <h3>Exzo Zone GFC</h3>
+            <p>
+              A growth factor–based therapy that controls hair fall and reactivates weak hair follicles.
+            </p>
+            <button class="btn-select-package">Select Package</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <!-- <section class="doctors">
+      <div class="container">
+        <h2>Our Skin & Hair Specialists</h2>
+        <p class="section-subtitle">
+          Thoya Clinic is the leading name for specialised dermatology related
+          services in Banjara Hills.
+        </p>
+        <div class="doctors-grid">
+          <div class="doctor-card">
+            <img
+              src="https://via.placeholder.com/200x200/0066CC/FFFFFF?text=Dr+T+N+Rekha"
+              alt="Dr. T N Rekha Singh"
+            />
+            <h3>Dr. T N Rekha Singh</h3>
+            <p class="doctor-qualification">
+              MBBS, MD - Dermatology, Venereology & Leprosy
+            </p>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-value">4.8</span>
+            </div>
+            <p class="languages">English, हिन्दी, తెలుగు</p>
+            <button
+              class="btn-book-appointment"
+              onclick="openAppointmentModal()"
+            >
+              Book an Appointment
+            </button>
+          </div>
+          <div class="doctor-card">
+            <img
+              src="https://via.placeholder.com/200x200/0066CC/FFFFFF?text=Dr+Sushant"
+              alt="Dr. Sushant Shetty"
+            />
+            <h3>Dr. Sushant Shetty</h3>
+            <p class="doctor-qualification">
+              MBBS, MD - Dermatology, Venereology & Leprosy
+            </p>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-value">4.8</span>
+            </div>
+            <p class="languages">English, हिन्दी</p>
+            <button
+              class="btn-book-appointment"
+              onclick="openAppointmentModal()"
+            >
+              Book an Appointment
+            </button>
+          </div>
+          <div class="doctor-card">
+            <img
+              src="https://via.placeholder.com/200x200/0066CC/FFFFFF?text=Dr+Veena"
+              alt="Dr. Veena Rao"
+            />
+            <h3>Dr. Veena Rao</h3>
+            <p class="doctor-qualification">
+              MBBS, DVDL - Diploma in Dermatology, Venereology & Leprosy
+            </p>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-value">4.8</span>
+            </div>
+            <p class="languages">English, हिन्दी, ಕನ್ನಡ</p>
+            <button
+              class="btn-book-appointment"
+              onclick="openAppointmentModal()"
+            >
+              Book an Appointment
+            </button>
+          </div>
+          <div class="doctor-card">
+            <img
+              src="https://via.placeholder.com/200x200/0066CC/FFFFFF?text=Dr+Brahmaiah"
+              alt="Dr. Brahmaiah"
+            />
+            <h3>Dr. Brahmaiah</h3>
+            <p class="doctor-qualification">
+              MBBS, DDVL - Diploma in Dermatology, Venereology & Leprosy
+            </p>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-value">4.8</span>
+            </div>
+            <p class="languages">English, हिन्दी, తెలుగు</p>
+            <button
+              class="btn-book-appointment"
+              onclick="openAppointmentModal()"
+            >
+              Book an Appointment
+            </button>
+          </div>
+          <div class="doctor-card">
+            <img
+              src="https://via.placeholder.com/200x200/0066CC/FFFFFF?text=Dr+Debatri"
+              alt="Dr. Debatri Datta"
+            />
+            <h3>Dr. Debatri Datta</h3>
+            <p class="doctor-qualification">
+              MBBS, MD - Dermatology, Venereology & Leprosy
+            </p>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-value">4.8</span>
+            </div>
+            <p class="languages">English, हिन्दी, বাংলা</p>
+            <button
+              class="btn-book-appointment"
+              onclick="openAppointmentModal()"
+            >
+              Book an Appointment
+            </button>
+          </div>
+        </div>
+        <div class="review-sources">
+          <div class="review-source">
+            <strong>Google</strong>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span>4.8</span>
+            </div>
+            <p>18k+ Verified Reviews</p>
+          </div>
+          <div class="review-source">
+            <strong>Practo</strong>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span>4.9</span>
+            </div>
+            <p>1k+ Verified Reviews</p>
+          </div>
+          <div class="review-source">
+            <strong>Facebook</strong>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span>4.7</span>
+            </div>
+            <p>1k+ Verified Reviews</p>
+          </div>
+        </div>
+        <p class="overall-rating">
+          <strong>4.8</strong> Rating with 22K+ Reviews
+        </p>
+      </div>
+    </section> -->
+
+    <!-- Client Reviews Section -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <h2>Client Reviews</h2>
+        <p class="section-subtitle">
+          Read below what our esteemed clients have to say about us and what
+          makes us the premier provider of skin and hair care services.
+        </p>
+        <div class="reviews-grid">
+          <div class="review-item">
+            <h4>Nice</h4>
+            <p>
+              Its nice to take treatment in Thoya. They have supporting staff.
+              And good doctor
+            </p>
+            <p class="review-author">S Sai vignesh Sreekakula</p>
+            <p class="review-service">Hair Loss Treatment</p>
+          </div>
+          <div class="review-item">
+            <h4>Overall good</h4>
+            <p>
+              I have under done hair loss treatment. I am satisfied with the
+              procedure. Here both doctor and staff are polite and nice. Had a
+              good experience. Also, hygiene is also good.
+            </p>
+            <p class="review-author">A Arpan Bhattacharya</p>
+            <p class="review-service">Hair Loss Treatment</p>
+          </div>
+          <div class="review-item">
+            <h4>Great!</h4>
+            <p>
+              The clinic has got an efficient doctor, effective staff and
+              friendly atmosphere.
+            </p>
+            <p class="review-author">P Poulamee Chakraborty</p>
+            <p class="review-service">Hair Loss Treatment</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expert Consultation Section -->
+    <section class="expert-consultation">
+      <div class="container">
+        <h2>Get a callback in 5 minutes!</h2>
+
+        <p class="consultation-subtitle">
+          Fill in your number below — we’ll reach out today to assess your hair
+          loss and suggest the best plan.
+        </p>
+        <button class="btn-submit">
+          Consultations are limited — secure your slot now!
+        </button>
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="faqs" id="faqs">
+      <div class="container">
+        <h2>FAQs on Hair Loss Treatment</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What Is The Cost Of This Treatment?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                The cost of hair loss treatment will depend on the type of hair
+                loss you are facing and the severity of the condition. After
+                evaluating this, your doctor may decide the modality of
+                treatment based on which the cost may vary. For more information
+                on this, you may contact us.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span
+                >How Many Sessions Of Hair Loss Treatment Do You Need To See
+                Results?</span
+              >
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Doctors recommend a course of 6-8 monthly sessions to tackle
+                early hereditary hair loss. Depending on your individual case,
+                they may recommend follow-up sessions to maintain the results.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Is Hair Loss Treatment A Permanent Treatment?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Thoya's hair loss treatment offers long-lasting results that are
+                sustainable with minimal follow-up sessions and post-care when
+                combined with oral and topical medications.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Who Is An Ideal Candidate For Hair Treatment?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                An ideal candidate for hair treatment is someone who has small
+                areas of alopecia areata or someone who is dealing with constant
+                hair fall/thinning. To undergo the treatment, our dermatologist
+                will perform a few investigations to know the root cause in
+                detail before proceeding with the treatment.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Are There Any Side Effects?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                No, there are no significant side-effects as Thoya's Hair Loss
+                Treatment is 100% safe. However, some clients may experience
+                transient discomfort or heaviness of the head. Your
+                dermatologist may prescribe analgesic to alleviate your
+                discomfort if any.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Is It A Painful Procedure?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Hair Regrowth Treatment at Thoya is a non-surgical treatment
+                that involves no cuts, blood loss and pain. However, one may
+                experience minimal discomfort, which is bearable.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span
+                >Is There A Recovery Period Or Downtime For The Treatment?</span
+              >
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Fortunately, there is no recovery period or downtime after the
+                treatment. A patient is only advised to not wash the head for 12
+                to 24 hours after the procedure.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>Copyright © 2025, Thoya Clinic.</p>
+        <ul class="footer-links">
+          <li><a href="#terms">Terms & Conditions</a></li>
+          <li><a href="#privacy">Privacy and Policy</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fab-container">
+      <button
+        class="fab"
+        onclick="window.open('tel:+919840003959')"
+        title="Call Now">
+        <span>📞</span>
+        <span class="fab-label">Talk Now</span>
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
