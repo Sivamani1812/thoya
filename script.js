@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeStickyAppointment();
     initializeSmoothScrolling();
     initializeFAQ();
+    initializeScrollAnimations();
 });
 
 // Initialize appointment forms
@@ -113,7 +114,7 @@ function verifyOTP() {
 function openAppointmentModal() {
     const modal = document.getElementById('appointmentModal');
     if (modal) {
-        modal.style.display = 'block';
+        modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
 }
@@ -122,7 +123,7 @@ function openAppointmentModal() {
 function closeAppointmentModal() {
     const modal = document.getElementById('appointmentModal');
     if (modal) {
-        modal.style.display = 'none';
+        modal.classList.remove('active');
         document.body.style.overflow = 'auto';
         
         // Reset form
@@ -429,4 +430,39 @@ function setFormLoading(form, isLoading) {
         }
     }
 }
+
+// Initialize scroll animations
+function initializeScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+    
+    // Add animate-on-scroll class to feature items, result items, etc.
+    const itemsToAnimate = document.querySelectorAll('.feature-item, .result-item, .benefit-item, .symptom-item, .review-item, .faq-item');
+    itemsToAnimate.forEach((item, index) => {
+        item.classList.add('animate-on-scroll');
+        item.style.transitionDelay = `${index * 0.1}s`;
+        observer.observe(item);
+    });
+}
+
+
+
+
 

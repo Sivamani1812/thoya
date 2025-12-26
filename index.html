@@ -5,30 +5,1338 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hair Loss Treatment | Thoya Clinic</title>
     <link rel="stylesheet" href="styles.css" />
+    <!-- <style>
+      
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+  text-transform: capitalize;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(231, 129, 89, 0.4);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 6px 25px rgba(231, 129, 89, 0.6);
+  }
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Scroll animation classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pulse-animation {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+.header {
+  background: #fff;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 0.6s ease-out;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero {
+  padding: 40px 0;
+  text-align: center;
+  background: url(./img/Gemini_Generated_Image_ynoz6bynoz6bynoz1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, rgba(255,255,255,0.8), transparent);
+}
+
+/* ========================================
+   STICKY APPOINTMENT
+   ======================================== */
+.appointment-sticky {
+  background: linear-gradient(135deg, #e78159 0%, #d66b45 100%);
+  padding: 15px 0;
+  position: sticky;
+  top: 80px;
+  z-index: 999;
+  display: none;
+  box-shadow: 0 4px 15px rgba(231, 129, 89, 0.3);
+}
+
+.appointment-sticky.show {
+  display: block;
+  animation: slideDown 0.4s ease-out;
+}
+
+.book-btn-sticky {
+  background: #fff;
+  color: #e78159;
+  border: none;
+  padding: 14px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.book-btn-sticky:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   MODAL
+   ======================================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 35px;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  animation: modalFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+.close {
+  color: #999;
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.close:hover {
+  color: #e78159;
+  transform: rotate(90deg);
+}
+
+.modal-content h2 {
+  margin-bottom: 25px;
+  color: #e78159;
+  font-size: 28px;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.form-group input,
+.form-group select {
+  flex: 1;
+  min-width: 200px;
+  padding: 14px 16px;
+  border: 2px solid #e8e8e8;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #e78159;
+  box-shadow: 0 0 0 4px rgba(231, 129, 89, 0.1);
+}
+
+.otp-group {
+  display: none;
+}
+
+.otp-group.show,
+.otp-group[style*="flex"] {
+  display: flex;
+}
+
+.btn-send-otp,
+.btn-resend-otp,
+.btn-verify {
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #e78159 0%, #d66b45 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.btn-send-otp:hover,
+.btn-resend-otp:hover,
+.btn-verify:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(231, 129, 89, 0.4);
+}
+
+.btn-submit {
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #e78159 0%, #d66b45 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: fit-content;
+  margin: 10px auto 0;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(231, 129, 89, 0.4);
+}
+
+.callback-guarantee {
+  text-align: center;
+  margin-top: 20px;
+  color: #e78159;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.callback-icon {
+  font-size: 20px;
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+.main-nav {
+  background: #f8f9fa;
+  padding: 18px 0;
+  position: sticky;
+  top: 80px;
+  z-index: 998;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+}
+
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e78159;
+  transition: width 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: #e78159;
+}
+
+.nav-list a:hover::after {
+  width: 100%;
+}
+
+/* ========================================
+   SECTION STYLES
+   ======================================== */
+section {
+  padding: 80px 0;
+}
+
+section h2 {
+  font-size: 40px;
+  color: #e78159;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  color: #666;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.section-subtitle li {
+  list-style: none;
+}
+
+/* ========================================
+   WHY CHOOSE SECTION
+   ======================================== */
+.why-choose {
+  background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.feature-item {
+  text-align: center;
+  padding: 35px 25px;
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(135deg, rgba(71, 111, 34, 0.85) 0%, rgba(61, 89, 1, 0.9) 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(71, 111, 34, 0.3);
+}
+
+.feature-item:hover::before {
+  opacity: 1;
+}
+
+.feature-item img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 25px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease;
+  object-fit: cover;
+}
+
+.feature-item:hover img {
+  transform: scale(1.1) rotate(5deg);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.feature-item h3 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.feature-item p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ========================================
+   RESULTS SECTION
+   ======================================== */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  margin-top: 50px;
+}
+
+.result-item {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.result-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.before-after {
+  display: flex;
+  position: relative;
+}
+
+.before-after::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, #e78159, #d66b45);
+  transform: translateX(-50%);
+}
+
+.before,
+.after {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.before img,
+.after img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.result-item:hover .before img,
+.result-item:hover .after img {
+  transform: scale(1.05);
+}
+
+.before span,
+.after span {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 6px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 13px;
+  backdrop-filter: blur(5px);
+}
+
+.after span {
+  background: linear-gradient(135deg, #e78159 0%, #d66b45 100%);
+}
+
+.result-info {
+  padding: 22px;
+}
+
+.result-info p {
+  margin: 6px 0;
+  color: #666;
+  font-size: 15px;
+}
+
+.result-info strong {
+  color: #333;
+}
+
+/* CTA Section */
+.cta-section {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-direction: column;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.cta-section p {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+.cta-section p span {
+  color: #e78159;
+  font-weight: 700;
+}
+
+.cta-section a {
+  text-decoration: none;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.btn-talk-expert {
+  padding: 18px 45px;
+  background: linear-gradient(135deg, #e78159 0%, #d66b45 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-talk-expert:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(231, 129, 89, 0.4);
+}
+
+/* ========================================
+   BENEFITS SECTION
+   ======================================== */
+.benefits {
+  background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 25px 15px 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefit-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-item img {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.benefit-item:hover img {
+  transform: scale(1.08);
+}
+
+.benefit-item h3 {
+  font-size: 18px;
+  color: #e78159;
+  transition: transform 0.3s ease;
+}
+
+.benefit-item:hover h3 {
+  transform: scale(1.05);
+}
+
+/* ========================================
+   SYMPTOMS SECTION
+   ======================================== */
+.symptoms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  margin-top: 50px;
+}
+
+.symptom-item {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.symptom-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.symptom-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.symptom-item:hover img {
+  transform: scale(1.05);
+}
+
+.symptom-item h3 {
+  padding: 22px 22px 12px;
+  color: #e78159;
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.symptom-item:hover h3 {
+  transform: translateX(5px);
+}
+
+.symptom-item p {
+  padding: 0 22px;
+  color: #666;
+  margin-bottom: 22px;
+  line-height: 1.7;
+}
+
+.btn-select-package {
+  width: calc(100% - 44px);
+  margin: 0 22px 22px;
+  padding: 14px;
+  background: linear-gradient(135deg, #e78159 0%, #d66b45 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-select-package:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(231, 129, 89, 0.4);
+}
+
+/* ========================================
+   REVIEWS SECTION
+   ======================================== */
+.reviews {
+  background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  margin-top: 50px;
+}
+
+.review-item {
+  background: #fff;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.review-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+.review-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #e78159, #d66b45);
+  transition: width 0.4s ease;
+}
+
+.review-item:hover::after {
+  width: 100%;
+}
+
+.quote-mark {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 80px;
+  color: rgba(231, 129, 89, 0.1);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.review-item h4 {
+  font-size: 24px;
+  color: #e78159;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.review-item > p {
+  color: #666;
+  margin-bottom: 18px;
+  line-height: 1.7;
+  position: relative;
+}
+
+.review-author {
+  font-weight: bold;
+  color: #333 !important;
+  margin-bottom: 5px !important;
+}
+
+.review-service {
+  color: #999 !important;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* ========================================
+   EXPERT CONSULTATION SECTION
+   ======================================== */
+.expert-consultation {
+  background: linear-gradient(135deg, rgba(71, 111, 34, 0.75) 0%, rgba(61, 89, 1, 0.85) 100%);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.expert-consultation h2 {
+  color: #fff;
+  font-size: 42px;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  animation: float 20s infinite ease-in-out;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  right: -100px;
+}
+
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -80px;
+  left: -80px;
+  animation-delay: -10s;
+}
+
+.consultation-subtitle {
+  font-size: 20px;
+  margin-bottom: 35px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.expert-consultation .btn-submit {
+  background: linear-gradient(135deg, #e78159 0%, #d66b45 100%);
+  font-size: 18px;
+  padding: 18px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ========================================
+   FAQS SECTION
+   ======================================== */
+.faqs {
+  background: #fff;
+}
+
+.faq-list {
+  max-width: 900px;
+  margin: 50px auto 0;
+}
+
+.faq-item {
+  margin-bottom: 18px;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #e78159;
+  box-shadow: 0 5px 20px rgba(231, 129, 89, 0.1);
+}
+
+.faq-question {
+  padding: 22px 25px;
+  background: #f8f9fa;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #e78159;
+  transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+  background: #f0f1f2;
+  padding-left: 30px;
+}
+
+.faq-icon {
+  font-size: 28px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+}
+
+.faq-answer p {
+  padding: 22px 25px;
+  color: #666;
+  line-height: 1.8;
+  background: #fff;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 15px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+/* ========================================
+   FLOATING ACTION BUTTONS
+   ======================================== */
+.fab-container {
+  position: fixed;
+  bottom: 30px;
+  right: 28px;
+  z-index: 1000;
+}
+
+.fab {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e78159 0%, #d66b45 100%);
+  color: #fff;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  box-shadow: 0 6px 25px rgba(231, 129, 89, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 35px rgba(231, 129, 89, 0.6);
+}
+
+.fab-icon {
+  position: relative;
+  z-index: 10;
+}
+
+.fab-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: rgba(231, 129, 89, 0.5);
+  animation: pulseRing 1.5s infinite;
+}
+
+.fab-ring.delay {
+  animation-delay: 0.5s;
+}
+
+.fab-label {
+  position: absolute;
+  right: 75px;
+  background: #333;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.fab-label::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-left-color: #333;
+}
+
+.fab:hover .fab-label {
+  opacity: 1;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+
+  section h2 {
+    font-size: 30px;
+  }
+
+  .nav-list {
+    gap: 18px;
+  }
+
+  .nav-list a {
+    font-size: 14px;
+  }
+
+  .features-grid,
+  .benefits-grid,
+  .symptoms-grid,
+  .results-grid,
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    margin: 10% auto;
+    padding: 25px;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+  }
+
+  .cta-section p {
+    font-size: 1.5rem;
+  }
+
+  .fab-container {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .fab {
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+  }
+
+  .fab-label {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  section h2 {
+    font-size: 26px;
+  }
+
+  .hero {
+    background-position: left;
+    height: 300px;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+
+  .appointment-sticky {
+    top: 80px;
+  }
+
+  .main-nav {
+    top: 70px;
+  }
+
+  .before-after {
+    flex-direction: column;
+  }
+
+  .before-after::after {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    transform: translateY(-50%);
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .benefit-item img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .benefit-item h3 {
+    font-size: 14px;
+  }
+
+  .expert-consultation h2 {
+    font-size: 28px;
+  }
+
+  .consultation-subtitle {
+    font-size: 16px;
+  }
+}
+
+    </style> -->
   </head>
-
-
-
-
-
-
 
 <body>
     <!-- Header -->
     <header class="header">
       <div class="container">
         <div class="logo">
-          <img src="./img/thoya-logo.png" alt="Thoya Logo" />
+         <img src="./img/thoya-logo.png" alt="Thoya Logo" />
         </div>
       </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-      <div class="container"></div>
+      <div class="container">
+        <div class="hero-copy">
+          <div class="hero-eyebrow">
+            <span>Hair Loss Treatment</span>
+          </div>
+
+          <h1>
+            Regain Thicker, Healthier Hair
+            <span>with Thoya Clinic</span>
+          </h1>
+
+          <p class="hero-subtext">
+            Certified dermatologists and trichologists treat the real cause of your hair fall
+            — stress, hormones, nutrition, sleep or weak roots — with advanced, non-surgical
+            regrowth solutions.
+          </p>
+
+          <div class="hero-badges">
+            <span class="hero-badge">Clinically proven treatments</span>
+            <span class="hero-badge">Safe, non-surgical & minimal downtime</span>
+            <span class="hero-badge">Personalized plans for your scalp & lifestyle</span>
+          </div>
+
+          <div class="hero-cta-row">
+            <button class="btn-primary-hero" onclick="openAppointmentModal()">
+              <span>📅</span>
+              <span>Book Your Hair Loss Consultation</span>
+            </button>
+            <p class="hero-secondary">
+              <strong>5-minute callback, guaranteed</strong> once you submit your number.
+            </p>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <img src="./img/c3.jpg" class="hero-right-img" alt="">
+          <div class="hero-card">
+            <p class="hero-card-title">See Real, Visible Transformation</p>
+            <p class="hero-card-subtitle">
+              Before & after results from patients who controlled hair fall and
+              improved thickness with Thoya's specialized plans.
+            </p>
+
+            <div class="hero-card-metas">
+              <div class="hero-card-meta">
+                <span class="hero-card-meta-dot"></span>
+                <span>Expert dermatologists & trichologists</span>
+              </div>
+              <div class="hero-card-meta">
+                <span class="hero-card-meta-dot"></span>
+                <span>QR678 Neo, GFC, PRP & more</span>
+              </div>
+            </div>
+
+            <p class="hero-card-footer">
+              Scroll to see results, benefits, symptoms we treat, client reviews and FAQs.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Book Appointment Form (Sticky) -->
@@ -331,152 +1639,6 @@
       </div>
     </section>
 
-    <!-- Doctors Section -->
-    <!-- <section class="doctors">
-      <div class="container">
-        <h2>Our Skin & Hair Specialists</h2>
-        <p class="section-subtitle">
-          Thoya Clinic is the leading name for specialised dermatology related
-          services in Banjara Hills.
-        </p>
-        <div class="doctors-grid">
-          <div class="doctor-card">
-            <img
-              src="https://via.placeholder.com/200x200/0066CC/FFFFFF?text=Dr+T+N+Rekha"
-              alt="Dr. T N Rekha Singh"
-            />
-            <h3>Dr. T N Rekha Singh</h3>
-            <p class="doctor-qualification">
-              MBBS, MD - Dermatology, Venereology & Leprosy
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span class="rating-value">4.8</span>
-            </div>
-            <p class="languages">English, हिन्दी, తెలుగు</p>
-            <button
-              class="btn-book-appointment"
-              onclick="openAppointmentModal()"
-            >
-              Book an Appointment
-            </button>
-          </div>
-          <div class="doctor-card">
-            <img
-              src="https://via.placeholder.com/200x200/0066CC/FFFFFF?text=Dr+Sushant"
-              alt="Dr. Sushant Shetty"
-            />
-            <h3>Dr. Sushant Shetty</h3>
-            <p class="doctor-qualification">
-              MBBS, MD - Dermatology, Venereology & Leprosy
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span class="rating-value">4.8</span>
-            </div>
-            <p class="languages">English, हिन्दी</p>
-            <button
-              class="btn-book-appointment"
-              onclick="openAppointmentModal()"
-            >
-              Book an Appointment
-            </button>
-          </div>
-          <div class="doctor-card">
-            <img
-              src="https://via.placeholder.com/200x200/0066CC/FFFFFF?text=Dr+Veena"
-              alt="Dr. Veena Rao"
-            />
-            <h3>Dr. Veena Rao</h3>
-            <p class="doctor-qualification">
-              MBBS, DVDL - Diploma in Dermatology, Venereology & Leprosy
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span class="rating-value">4.8</span>
-            </div>
-            <p class="languages">English, हिन्दी, ಕನ್ನಡ</p>
-            <button
-              class="btn-book-appointment"
-              onclick="openAppointmentModal()"
-            >
-              Book an Appointment
-            </button>
-          </div>
-          <div class="doctor-card">
-            <img
-              src="https://via.placeholder.com/200x200/0066CC/FFFFFF?text=Dr+Brahmaiah"
-              alt="Dr. Brahmaiah"
-            />
-            <h3>Dr. Brahmaiah</h3>
-            <p class="doctor-qualification">
-              MBBS, DDVL - Diploma in Dermatology, Venereology & Leprosy
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span class="rating-value">4.8</span>
-            </div>
-            <p class="languages">English, हिन्दी, తెలుగు</p>
-            <button
-              class="btn-book-appointment"
-              onclick="openAppointmentModal()"
-            >
-              Book an Appointment
-            </button>
-          </div>
-          <div class="doctor-card">
-            <img
-              src="https://via.placeholder.com/200x200/0066CC/FFFFFF?text=Dr+Debatri"
-              alt="Dr. Debatri Datta"
-            />
-            <h3>Dr. Debatri Datta</h3>
-            <p class="doctor-qualification">
-              MBBS, MD - Dermatology, Venereology & Leprosy
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span class="rating-value">4.8</span>
-            </div>
-            <p class="languages">English, हिन्दी, বাংলা</p>
-            <button
-              class="btn-book-appointment"
-              onclick="openAppointmentModal()"
-            >
-              Book an Appointment
-            </button>
-          </div>
-        </div>
-        <div class="review-sources">
-          <div class="review-source">
-            <strong>Google</strong>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span>4.8</span>
-            </div>
-            <p>18k+ Verified Reviews</p>
-          </div>
-          <div class="review-source">
-            <strong>Practo</strong>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span>4.9</span>
-            </div>
-            <p>1k+ Verified Reviews</p>
-          </div>
-          <div class="review-source">
-            <strong>Facebook</strong>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span>4.7</span>
-            </div>
-            <p>1k+ Verified Reviews</p>
-          </div>
-        </div>
-        <p class="overall-rating">
-          <strong>4.8</strong> Rating with 22K+ Reviews
-        </p>
-      </div>
-    </section> -->
 
     <!-- Client Reviews Section -->
     <section class="reviews" id="reviews">
@@ -528,8 +1690,8 @@
           Fill in your number below — we’ll reach out today to assess your hair
           loss and suggest the best plan.
         </p>
-        <button class="btn-submit">
-          Consultations are limited — secure your slot now!
+        <button class="btn-submit1"> <a href="#form">
+          Consultations are limited — secure your slot now! </a>
         </button>
       </div>
     </section>
@@ -644,6 +1806,67 @@
         </div>
       </div>
     </section>
+
+    <!-- Book Appointment Form Section -->
+<section class="section appointment-form-section" id="form" >
+  <div class="container">
+    <div class="form-section-content">
+      <h2 class="section-title">Book Your <span class="highlight">Free Consultation</span></h2>
+      <p class="form-subtitle">Fill in your details and our experts will call you back within 5 minutes</p>
+      
+      <form class="inline-appointment-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="inline-name"><i class="fas fa-user"></i> Full Name</label>
+            <input type="text" id="inline-name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="inline-phone"><i class="fas fa-phone"></i> Phone Number</label>
+            <input type="tel" id="inline-phone" placeholder="Enter 10-digit number" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="inline-city"><i class="fas fa-map-marker-alt"></i> City</label>
+            <select id="inline-city" required>
+              <option value="">Select City</option>
+              <option value="delhi">Delhi</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="bangalore">Bangalore</option>
+              <option value="hyderabad">Hyderabad</option>
+              <option value="chennai">Chennai</option>
+              <option value="kolkata">Kolkata</option>
+              <option value="pune">Pune</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="inline-concern"><i class="fas fa-notes-medical"></i> Hair Concern</label>
+            <select id="inline-concern" required>
+              <option value="">Select Concern</option>
+              <option value="hair-fall">Hair Fall</option>
+              <option value="baldness">Baldness</option>
+              <option value="thinning">Hair Thinning</option>
+              <option value="dandruff">Dandruff</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="crt-btn submit-form-btn">
+          <span class="btn-glow"></span>
+          <span class="btn-text"><i class="fas fa-calendar-check"></i> Book Free Consultation</span>
+        </button>
+      </form>
+      
+      <div class="form-guarantee">
+        <span><i class="fas fa-shield-alt"></i></span>
+        <span>100% Confidential | No Spam Calls</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
 
     <!-- Footer -->
     <footer class="footer">
